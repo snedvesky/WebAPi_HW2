@@ -8,7 +8,7 @@ var app = express();
 usergrid.init({
     orgId: orgName,
     appId: appName,
-    baseUrl: ""https://apibaas-trial.apigee.net""
+    baseUrl: "https://apibaas-trial.apigee.net"
 });
 
 // GET PROCEDURE
