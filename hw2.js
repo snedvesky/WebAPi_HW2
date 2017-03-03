@@ -5,6 +5,13 @@
 var express = require('express');
 var app = express();
 
+<<<<<<< HEAD
+=======
+usergrid.init({
+ 
+    baseUrl: 
+});
+>>>>>>> origin/master
 
 // GET PROCEDURE
 app.get('/gets', function(req, res){
@@ -64,4 +71,8 @@ app.listen(8080, function() {
     var h1 = server.address().address
     console.log("Server running on http://%s:%s", h1, p1)
 
+<<<<<<< HEAD
 })
+=======
+}
+>>>>>>> origin/master
