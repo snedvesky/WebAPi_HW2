@@ -5,11 +5,6 @@
 var express = require('express');
 var app = express();
 
-usergrid.init({
-    orgId: orgName,
-    appId: appName,
-    baseUrl: "https://apibaas-trial.apigee.net"
-});
 
 // GET PROCEDURE
 app.get('/gets', function(req, res){
@@ -18,7 +13,7 @@ app.get('/gets', function(req, res){
             res.send('GET:' + req.query);
         } else {
             res.send('Neither a header or query parameter were successfully sent!');
-    }
+        }
 });
 
 // POST PROCEDURE
@@ -28,7 +23,7 @@ app.post('/posts', function (req, res) {
             res.send('POST:' + req.query);
         } else {
             res.send('Neither a header or query parameter were successfully sent!');
-    }
+        }
 });
 
 // PUT PROCEDURE
@@ -38,7 +33,7 @@ app.put('/puts', function (req, res) {
             res.send('PUT:' + req.query);
         } else {
             res.send('Neither a header or query parameter were successfully sent!');
-    }
+        }
 });
 
 // DELETE PROCEDURE
@@ -46,9 +41,9 @@ app.delete('/deletes', function (req, res) {
     if (req.method === 'DELETE')
         if (Object.keys(req.query) !== null) {
             res.send('DELETE:' + req.query);
-    } else {
-        res.send('Neither a header or query parameter were successfully sent!');
-    }
+        } else {
+            res.send('Neither a header or query parameter were successfully sent!');
+        }
 });
 
 //  Base URL Request Rejection
@@ -69,4 +64,4 @@ app.listen(8080, function() {
     var h1 = server.address().address
     console.log("Server running on http://%s:%s", h1, p1)
 
-}
+})
